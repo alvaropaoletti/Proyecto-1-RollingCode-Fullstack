@@ -1,0 +1,6 @@
+    Sheets("Impresion").Select
+    Range("A6").Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Selection.PrintOut Copies:=1, Collate:=True
+    Sheets("Pedidos").Select
+    Application.CutCopyMode = False

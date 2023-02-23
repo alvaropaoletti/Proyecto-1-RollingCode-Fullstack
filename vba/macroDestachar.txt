@@ -1,0 +1,13 @@
+    Dim NumFila As Integer
+        NumFila = Application.WorksheetFunction.VLookup(ActiveCell.Column, ThisWorkbook.Sheets("Hoja1").Range("V2:Y91"), 3, 0)
+    Dim NumCol As Integer
+        NumCol = Application.WorksheetFunction.VLookup(ActiveCell.Column, ThisWorkbook.Sheets("Hoja1").Range("V2:Y91"), 4, 0)
+
+    If ActiveCell.Interior.Color <> RGB(255, 255, 255) Then
+        With ActiveCell.Interior
+            .Pattern = xlNone
+            .TintAndShade = 0
+            .PatternTintAndShade = 0
+        End With
+        ThisWorkbook.Sheets("Progreso").Cells(NumFila, NumCol) = ThisWorkbook.Sheets("Progreso").Cells(NumFila, NumCol).Value - ActiveCell.Value
+    End If

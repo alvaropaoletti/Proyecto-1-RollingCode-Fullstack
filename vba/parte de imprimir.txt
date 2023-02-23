@@ -1,0 +1,10 @@
+    Cells(x, 1).Copy
+        z.Range("A3").PasteSpecial xlPasteValues
+    Cells(x, 3).Copy
+        z.Range("C3").PasteSpecial xlPasteValues
+    Cells(x, 4).Copy
+        z.Range("D3").PasteSpecial xlPasteValues
+    Cells(x, 5).Copy
+        z.Range("E3").PasteSpecial xlPasteValues
+    Cells(x, 110).Copy
+        z.Range("DF3").PasteSpecial xlPasteValues
